@@ -1,0 +1,326 @@
+/* ================= HEADER ================= */
+.header-box {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  padding: 40px 20px;   /* 🔥 increase height */
+  background: linear-gradient(to right, #007bff, #00c6ff);
+  color: white;
+  text-align: center;
+  border-radius: 0 0 20px 20px;
+  margin-bottom: 20px;
+}
+
+.header-box h1 {
+  margin: 0;
+  font-size: 36px;   
+}
+
+.header-box h2 {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.header-box button {
+  margin-top: 15px;
+  padding: 8px 16px;
+  background: white;
+  color: #007bff;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.header-box button:hover {
+  background: #f1f1f1;
+}
+/* ================= BODY ================= */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-image: url("./car.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+/* ================= CONTAINER ================= */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  max-width: 1200px;
+  min-height: 100vh;
+}
+
+/* ================= CENTER ================= */
+.center {
+  text-align: center;
+}
+
+/* ================= TWO COLUMN LAYOUT ================= */
+.main-layout {
+  display: flex;
+  justify-content: center;
+  gap: 150px;
+  margin-top: 50px;
+  align-items: flex-start;   
+}
+/* LEFT SIDE (CARS) */
+.left {
+  flex: 1;
+  max-width: 520px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* RIGHT SIDE (AI BOX) */
+.right {
+  flex: 1;
+  max-width: 520px;
+
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+
+  margin-top: 270px;         
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* ================= CHAT BOX ================= */
+.chat-box {
+  height: 230px;     
+  max-height: 230px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  background: #f9f9f9;
+  margin-bottom: 15px;
+  overflow-y: auto;
+}
+
+/* ================= SEARCH ================= */
+.search-box {
+  display: flex;
+  gap: 10px;
+}
+
+input {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  transition: 0.3s;
+  width: 100%;
+}
+
+input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0px 0px 5px rgba(0,123,255,0.5);
+}
+
+/* ================= BUTTON ================= */
+button {
+  padding: 10px 15px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #0056b3;
+  transform: scale(1.05);
+}
+
+/* ================= MESSAGE ================= */
+.message {
+  text-align: center;
+  color: blue;
+  margin-bottom: 10px;
+}
+
+/* ================= SECTION ================= */
+.section {
+  margin-top: 30px;
+  max-width: 1100px;   
+  margin-left: auto;
+  margin-right: auto;
+   width: 100%;
+}
+
+.section-title {
+  text-align: left;
+  margin-left: 0;        
+  color: white;         
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.section-container {
+  max-width: 1100px;   
+  margin: auto;
+}
+
+/* ================= CAR CARDS ================= */
+.card {
+  background: white;
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.15);
+  transition: 0.3s;
+  width: 100%;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* ================= FEATURE GRID ================= */
+.feature-grid {
+ 
+  
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+
+  gap: 20px;
+  width: 100%;              
+}
+
+.section .feature-grid {
+  display: flex;
+}
+
+
+.feature-card {
+  width: 200px;
+  height: 130px;
+
+  display: flex;             
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(to right, #007bff, #00c6ff);
+  color: white;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.feature-card:hover {
+  transform: scale(1.05);
+}
+
+/* HOVER DETAILS */
+.feature-details {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.85);
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: 0.3s;
+  border-radius: 12px;
+}
+.feature-info {
+  display: none;
+  font-size: 12px;
+  margin-top: 10px;
+  color: #fff;
+}
+
+/* SHOW ON HOVER */
+.feature-card:hover .feature-info {
+  display: block;
+}
+.feature-card:hover .feature-details {
+  opacity: 1;
+}
+
+.feature-details ul {
+  list-style: none;
+  padding: 15px;
+  font-size: 14px;
+  text-align: left;
+}
+
+/* ================= TABLE ================= */
+table {
+  margin: auto;
+  border-collapse: collapse;
+  width: 80%;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 15px;
+}
+
+td, th {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+th {
+  background: #007bff;
+  color: white;
+}
+
+tr:hover {
+  background: #f1f1f1;
+}
+
+/* ================= BOOKING BOX ================= */
+.booking-box {
+  width: 320px;
+  margin: 15px auto;
+  padding: 20px;
+
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
+
+  text-align: left;
+}
+
+/* 🔥 SHORT & CENTERED INPUTS */
+.booking-box input {
+  width: 250px;        
+  margin: 8px auto;    
+  display: block;
+}
+
+/* 🔥 MATCH BUTTON SIZE */
+.booking-box button {
+  width: 250px;
+  margin: 12px auto;
+  display: block;
+}
+/* ================= SUCCESS ================= */
+.success {
+  color: green;
+  margin-top: 10px;
+  font-weight: bold;
+}
+.booking-message {
+  text-align: center;
+  margin-top: 8px;     /* small gap below box */
+  font-weight: bold;
+}
+.contact-text {
+  color: white;
+}
+
+
+
